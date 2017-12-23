@@ -1,0 +1,22 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font: inherit; }
+
+.container { width: 1160px; margin: 50px auto; overflow: hidden; }
+
+.box { position: relative; width: 250px; border: 1px solid #ddd; margin: 20px; float: left; }
+
+.image { position: relative; width: 100%; height: 185px; background: #ddd; }
+
+.icon { position: absolute; bottom: 15px; left: 15px; width: 40px; height: 40px; background: #bbb; }
+
+.bar { width: 100%; line-height: 40px; border-top: 1px solid #ddd; }
+
+.favorite { position: absolute; bottom: 11px; right: 15px; width: 17px; height: 17px;
+    border: 1px solid #aaa; border-radius: 50%; }
+.favorite.active { background: red; }
+
+h2, h3, p { padding: 0 15px; line-height: 1; font-weight: 400; }
+
+h2 { font-size: 20px; color: #333; }
+h3 { font-size: 15px; color: #aaa; }
+p { font-size: 14px; color: #777; }
+
