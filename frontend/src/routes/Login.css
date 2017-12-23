@@ -1,5 +1,10 @@
 * { margin: 0; padding: 0; }
 
+.login-bg {
+	height: 100vh; background-color: #f8f8f8; overflow: hidden;
+}
+
 .Login {
-    width: 500px; margin: 100px auto;
+    width: 360px; margin: 100px auto; padding: 20px; background: #fff;
+	border: 1px solid #ddd; border-radius: 5px;
 }

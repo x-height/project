@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react';
 import axios from 'axios';
-
 import './Login.css';
 
 class Login extends Component {
     constructor() {
         super();
         this.state = {
-            username: '',
-            userpass: ''
+            username : '',
+            userpass : ''
         }
         this.handleUserName = this.handleUserName.bind(this);
         this.handleUserPass = this.handleUserPass.bind(this);
@@ -23,8 +22,8 @@ class Login extends Component {
     }
     handleSubmit() {
         axios.post('http://localhost:4000/login', {
-            username: this.state.username,
-            userpass: this.state.userpass,
+            username : this.state.username,
+            userpass : this.state.userpass,
         })
         .then((response) => {
             let {success, error} = response.data;
@@ -37,7 +36,6 @@ class Login extends Component {
                 alert('비밀번호가 맞지 않습니다');
                 return;
             }
-            console.log(response.data);
         });
     }
     render() {

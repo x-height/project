@@ -10,16 +10,21 @@ const Card = (props) => {
 //    }
     return (
         <div>
-            <div className="box">
-                <div className="image">
-                    <div className="icon"></div>
+            <div className="card">
+                <div className="thums">
+                    <div className="img"></div>
+                    <div className="logo"></div>
                 </div>
-                <h2>{props.position}</h2>
-                <h3>{props.company}</h3>
-                <p>채용보상금 {props.rebate.toLocaleString('en')}원</p>
-                <div>
-                    <p className="bar">{(props.recom > 0) && <span>{props.recom}명 추천</span>}</p>
-                    <div className={props.favorite}></div>
+                <div className="info">
+                    <h3>{props.recruit}</h3>
+                    <div className="company">{props.company}</div>
+                    <div className="rebate">채용보상금 {props.rebate.toLocaleString()}원</div>
+                </div>
+                <div className="opt">
+                    <div className="recom">
+                        {(props.recom > 0) && <span>{props.recom}명 추천</span>}
+                    </div>
+                    <div className={classes}></div>
                 </div>
             </div>
         </div>

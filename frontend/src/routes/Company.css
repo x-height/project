@@ -1,22 +1,25 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font: inherit; }
 
-.container { width: 1160px; margin: 50px auto; overflow: hidden; }
+.container { width: 1160px; margin: 30px auto; overflow: hidden; }
 
-.box { position: relative; width: 250px; border: 1px solid #ddd; margin: 20px; float: left; }
+.card { float: left; width: 250px; border: 1px solid #ddd; margin: 20px; }
 
-.image { position: relative; width: 100%; height: 185px; background: #ddd; }
+.thums { position: relative; }
+.thums .img { width: 100%; height: 185px; background: #ddd; }
+.thums .logo {
+    position: absolute; bottom: 15px; left: 15px;
+    width: 40px; height: 40px; background: #bbb;
+}
 
-.icon { position: absolute; bottom: 15px; left: 15px; width: 40px; height: 40px; background: #bbb; }
+.info { padding: 15px; border-top: 1px solid #ddd; }
+.info h3 { font-size: 18px; color: #333; }
+.info .company { font-size: 15px; color: #aaa; }
+.info .rebate { font-size: 14px; color: #777; }
 
-.bar { width: 100%; line-height: 40px; border-top: 1px solid #ddd; }
-
-.favorite { position: absolute; bottom: 11px; right: 15px; width: 17px; height: 17px;
-    border: 1px solid #aaa; border-radius: 50%; }
-.favorite.active { background: red; }
-
-h2, h3, p { padding: 0 15px; line-height: 1; font-weight: 400; }
-
-h2 { font-size: 20px; color: #333; }
-h3 { font-size: 15px; color: #aaa; }
-p { font-size: 14px; color: #777; }
-
+.opt { height: 40px; line-height: 40px; padding: 0 15px; }
+.opt .recom { float: left; }
+.opt .favorite {
+    float: right; width: 16px; height: 16px; margin: 12px 0;
+    border: 1px solid #ccc; border-radius: 50%;
+}
+.opt .favorite.active { background: #cc0000; }
