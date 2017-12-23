@@ -21,9 +21,9 @@ class Company extends Component {
     }
     render() {
         const {companyArray} = this.state;
-        const lost = companyArray.map((v) => {
+        const list = companyArray.map((v) => {
             return (
-                <card
+                <Card
                     key={v.id}
                     company={v.name}
                     recruit={v.recruit}

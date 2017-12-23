@@ -15,10 +15,10 @@ class Login extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleUserName(e) {
-        this.setState({username: e.target.value});
+        this.setState({username : e.target.value});
     }
     handleUserPass(e) {
-        this.setState({userpass: e.target.value});
+        this.setState({userpass : e.target.value});
     }
     handleSubmit() {
         axios.post('http://localhost:4000/login', {
@@ -32,7 +32,7 @@ class Login extends Component {
                 history.push('/company');
             } else if (success === 2) {
                 history.push('/register');
-            } else if (error === 1) {
+            } else if (error === -1) {
                 alert('비밀번호가 맞지 않습니다');
                 return;
             }
@@ -45,13 +45,21 @@ class Login extends Component {
                     <Form>
                         <Form.Field>
                             <label>User Name</label>
-                            <input placeholder="User Name" onChange={this.handleUserName} />
+                            <input
+                                type="text"
+                                placeholder="User Name"
+                                onChange={this.handleUserName}
+                            />
                         </Form.Field>
                         <Form.Field>
                             <label>User Password</label>
-                            <input placeholder="User Password" onChange={this.handleUserPass} />
+                            <input
+                                type="password"
+                                placeholder="User Password"
+                                onChange={this.handleUserPass}
+                            />
                         </Form.Field>
-                        <Button onClick={this.handleSubmit}>전송</Button>
+                        <Button onClick={this.handleSubmit}>Submit</Button>
                     </Form>
                 </div>
             </div>
