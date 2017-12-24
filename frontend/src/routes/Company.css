@@ -1,19 +1,34 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font: inherit; }
+* { margin: 0; padding: 0; box-sizing: border-box; font: inherit;}
 
-.container { width: 1160px; margin: 30px auto; overflow: hidden; }
+.container { width: 1080px; margin: 30px auto; overflow: hidden; }
 
-.card { float: left; width: 250px; border: 1px solid #ddd; margin: 20px; }
+.card { float: left; width: 250px; border: 1px solid #ddd; margin: 10px; }
 
 .thums { position: relative; }
 .thums .img { width: 100%; height: 185px; background: #ddd; }
-.thums .logo { position: absolute; bottom: 15px; left: 15px; width: 40px; height: 40px; background: #bbb; }
+.thums .logo {
+    position: absolute; bottom: 15px; left: 15px;
+    width: 40px; height: 40px; background: #bbb;
+}
 
 .info { padding: 15px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
-.info h3 { font-size: 18px; color: #333; }
+.info h3 {
+    font-size: 18px; color: #333; overflow: hidden;
+    text-overflow: ellipsis; white-space: nowrap; word-wrap: normal;
+}
 .info .company { font-size: 15px; color: #aaa; }
 .info .rebate { font-size: 14px; color: #777; }
 
 .opt { height: 40px; line-height: 40px; padding: 0 15px; }
 .opt .recom { float: left; }
-.opt .favorite { float: right; width: 16px; height: 16px; margin: 12px 0; border: 1px solid #ccc; border-radius: 50%; }
+.opt .favorite {
+    float: right; width: 16px; height: 16px; margin: 12px 0;
+    border: 1px solid #ccc; border-radius: 50%;
+}
 .opt .favorite.active { background: #cc0000; }
+
+.category { margin: 0 10px 10px; }
+.category li {
+    display: inline-block; background: #fff; margin-right: 20px; padding: 15px;
+    border: 1px solid #ddd; cursor: pointer;
+}

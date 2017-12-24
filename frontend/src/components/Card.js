@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Card = (props) => {
     let classes = (props.favorite === 1) ? 'favorite active' : 'favorite';
@@ -9,7 +9,7 @@ const Card = (props) => {
 //        classes = 'favorite';
 //    }
     return (
-        <div className="card">
+        <div className="card" onClick={() => {props.cardLink(props.company_id)}}>
             <div className="thums">
                 <div className="img"></div>
                 <div className="logo"></div>

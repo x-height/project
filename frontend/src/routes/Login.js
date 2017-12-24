@@ -15,10 +15,14 @@ class Login extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleUserName(e) {
-        this.setState({username : e.target.value});
+        this.setState({
+            username : e.target.value
+        });
     }
     handleUserPass(e) {
-        this.setState({userpass : e.target.value});
+        this.setState({
+            userpass : e.target.value
+        });
     }
     handleSubmit() {
         axios.post('http://localhost:4000/login', {
