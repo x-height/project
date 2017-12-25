@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors')();
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json()); //axios 통신시 필요
 app.use(cors);
 
@@ -32,6 +32,15 @@ app.post('/login', function(req, res) {
 
 const companyList = require('./data');
 app.get('/company', function(req, res) {
+    res.json(companyList);
+});
+app.get('/company/front', function(req, res) {
+    res.json(companyList);
+});
+app.get('/company/back', function(req, res) {
+    res.json(companyList);
+});
+app.get('/company/app', function(req, res) {
     res.json(companyList);
 });
 app.get('/company/:company_id', function(req, res) {

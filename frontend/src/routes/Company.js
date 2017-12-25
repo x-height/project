@@ -12,6 +12,9 @@ class Company extends Component {
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleCategory = this.handleCategory.bind(this);
+        this.handleFront = this.handleFront.bind(this);
+        this.handleBack = this.handleBack.bind(this);
+        this.handleApp = this.handleApp.bind(this);
     }
     componentDidMount() {
         axios.get('http://localhost:4000/company')
@@ -30,15 +33,24 @@ class Company extends Component {
             type : e.target.innerHTML
         });
     }
+    handleFront() {
+        this.props.history.push(`/company/front`);
+    }
+    handleBack() {
+        this.props.history.push(`/company/back`);
+    }
+    handleApp() {
+        this.props.history.push(`/company/app`);
+    }
     render() {
-        const {companyArray, type} = this.state;
-        const newArray = companyArray.filter((v) => {
-            if (type === '전체') {
-                return v;
-            }
-           return v.type === type;
-        });
-        const list = newArray.map((v) => {
+        const {companyArray} = this.state;
+        // const newArray = companyArray.filter((v) => {
+        //     if (type === '전체') {
+        //         return v;
+        //     }
+        //    return v.type === type;
+        // });
+        const list = companyArray.map((v) => {
             return (
                 <Card
                     cardLink = {this.handleClick}
@@ -56,9 +68,9 @@ class Company extends Component {
             <div>
                 <ul className="category">
                     <li onClick={this.handleCategory}>전체</li>
-                    <li onClick={this.handleCategory}>프론트엔드개발자</li>
-                    <li onClick={this.handleCategory}>백엔드개발자</li>
-                    <li onClick={this.handleCategory}>앱개발자</li>
+                    <li onClick={this.handleFront}>프론트엔드개발자</li>
+                    <li onClick={this.handleBack}>백엔드개발자</li>
+                    <li onClick={this.handleApp}>앱개발자</li>
                 </ul>
                 <div className="list">
                     {list}
